@@ -19,17 +19,16 @@ const (
 )
 
 func CalcSquare(sideLen float64, sidesNum sides) float64 {
-	if sidesNum == 3 {
+	if sidesNum == SidesTriangle {
 		sRoot := math.Sqrt(3)
 		root := sideLen * sideLen
 		return (sRoot / 4) * root
 	}
-	if sidesNum == 0 {
-		pi := math.Pi * 4
+	if sidesNum == SidesCircle {
 		root := sideLen * sideLen
-		return root / pi
+		return math.Pi * root
 	}
-	if sidesNum == 4 {
+	if sidesNum == SidesSquare {
 		return sideLen * sideLen
 	}
 	return 0
